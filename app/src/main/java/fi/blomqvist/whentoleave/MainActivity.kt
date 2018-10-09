@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe({
-                    minutes_number.text = it.first().arrivalInMinutes.toString()
+                    minutes_number.text = it.first().arrivalText
                     },{
                     Log.e("MainActivity", it.message, it)
                 })
